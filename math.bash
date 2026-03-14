@@ -39,7 +39,7 @@ function multiply()
 function divide()
 {
     if ((0 == $2)); then
-        echo "Error: $DIVIDE_ERROR"
+        echo "$DIVIDE_ERROR"
         exit 1  # tell the caller an error occurred
     fi
     
@@ -73,9 +73,12 @@ case $COMMAND in
         RESULT=$(multiply FIRST SECOND)
         ;;
     d)
-        RESULT=$(divide FIRST SECOND)
+        RESULT=$(divide $FIRST $SECOND)  # without $, the result will be incorrect
+        if [ "$RESULT" == "$DIVIDE_ERROR" ]; then
+            exit 1
+        fi
         ;;
 esac
 
-echo "Result: $RESULT"
+echo $RESULT
 
