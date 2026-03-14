@@ -1,3 +1,12 @@
+```
+ _               _                      _      
+| |             | |                    | |     
+| |__   __ _ ___| |__         ___ __ _| | ___ 
+| '_ \ / _` / __| '_ \       / __/ _` | |/ __|
+| |_) | (_| \__ \ | | |  _  | (_| (_| | | (__ 
+|_.__/ \__,_|___/_| |_| (_)  \___\__,_|_|\___|
+```
+
 # bash-calculator
 
 A simple command-line calculator written in Bash. Supports addition, subtraction, multiplication, and division of two values.
