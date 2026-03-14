@@ -77,3 +77,11 @@ if (( $(echo "$result == 5.00" | bc) )); then  # bash cannot do floating points,
 else
     printf "Divide test failed with 20 and 4\n"
 fi
+
+# ========== Test Exit Status 1 For Invalid Options ==========
+./math.bash -h > /dev/null
+if (($? == 1)); then
+    printf "Invalid option test passed with -h opt\n"
+else
+    printf "Invalid option test failed with -h opt\n"
+fi

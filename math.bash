@@ -18,7 +18,7 @@ RESULT=0
 
 function show_help()
 {
-    printf "\tUsage -[%s] val1 val2\n" $OPTIONS
+    printf "\tUsage $0 -[%s] val1 val2\n" $OPTIONS
 }
 
 function add()
@@ -54,6 +54,7 @@ do
             ;;
         *)
             echo "Invalid option"
+            show_help
             exit 1
             ;;
     esac
